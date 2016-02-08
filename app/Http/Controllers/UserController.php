@@ -18,6 +18,6 @@ class UserController extends Controller
 
 
 
-        return view('user.profile', ['hello' => "kaibai"]);
+        return view('user.profile', ['userId' => $id]);
     }
 }
