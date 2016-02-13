@@ -139,7 +139,8 @@
 </head>
 <body>
 
-  @include('layouts.sidebar')
+  @include('layouts.topnavbar')
+
   <!-- @section('sidebar')
   @show -->
 
