@@ -118,7 +118,7 @@
   </script>
 </head>
 <body>
-
+@include(layouts.topnavbar)
 
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
@@ -149,7 +149,7 @@
         </div>
       </div>
     </div>
-    
+
 
     <div class="ui text container">
       <h1 class="ui inverted header">RocketJobs</h1>

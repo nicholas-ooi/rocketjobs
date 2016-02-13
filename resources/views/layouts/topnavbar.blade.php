@@ -1,5 +1,3 @@
-@extends('layouts.welcome')
-
 @section('topnavbar')
 	@parent
 	<div class="ui container">
