@@ -12,7 +12,13 @@
 */
 
 
+Route::get('/', function () {
+    return view('pages.home');
+});
 
+
+Route::get('user/{id}', 'UserController@showProfile');
+Route::get('alchemy', 'AlchemyController@showResult');
 
 
 /*
