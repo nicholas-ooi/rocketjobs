@@ -1,0 +1,28 @@
+.masthead.segment {
+  min-height: 700px;
+  padding: 1em 0em;
+  background-image: url("/resources/assets/images/home1.jpg"); }
+  .masthead.segment .ui.menu .ui.button {
+    margin-left: 0.5em; }
+  .masthead.segment h1.ui.header {
+    margin-top: 3em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: normal; }
+  .masthead.segment h2 {
+    font-size: 1.7em;
+    font-weight: normal; }
+
+.home-search {
+  width: 80%; }
+
+.home-buttons {
+  margin: auto !important; }
+  .home-buttons .four.wide.column {
+    padding: 50px;
+    margin: 20px;
+    background-color: teal;
+    color: white;
+    text-align: center !important; }
+
+/*# sourceMappingURL=home.css.map */
