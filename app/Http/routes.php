@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('pages.master');
 });
 
+Route::get('/home', function () {
+    return view('pages.home');
+});
+
+
 Route::get('user/{id}', 'UserController@showProfile');
 
 

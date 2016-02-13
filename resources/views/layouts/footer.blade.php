@@ -1,5 +1,4 @@
-@section('footer')
-	@parent
+
 	<!-- Footer -->
 	<div class="ui inverted vertical footer segment">
     <div class="ui container">
@@ -29,4 +28,3 @@
       </div>
     </div>
   </div>
-@endsection
