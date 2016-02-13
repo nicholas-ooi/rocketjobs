@@ -118,7 +118,7 @@
   </script>
 </head>
 <body>
-@include(layouts.topnavbar)
+  @include('layouts.topnavbar')
 
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
