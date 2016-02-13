@@ -157,7 +157,7 @@
       <div class="item">
       <div class="home-search ui icon input">
         <input type="text" placeholder="Which city are you located?">
-        <i class="right arrow icon"></i>
+        <i class="cloud icon"></i>
       </div>
     </div>
     </div>
@@ -174,17 +174,6 @@
     </div>
   </div>
 
-<!--
-<div class="home-buttons centered row container">
-  <div class=" ui two column center aligned">
-    <div class="four wide column">Search nearby rocket jobs</div>
-    <div class="four wide column">Accept the offer</div>
-      <div class="four wide column">Receive confirmation</div>
-      <div class="four wide column">Happy Rocketjob-ing</div>
-    </div>
-  </div>
-</div>
-  -->
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
       <div class="ui stackable inverted divided equal height stackable grid">
