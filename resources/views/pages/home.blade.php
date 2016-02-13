@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  @include('layouts.header')
-</head>
-<body>
+@extends('layouts.master')
 
-@include('layouts.topnavbar')
+@section('content')
 
   <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
@@ -60,9 +55,4 @@
     </div>
   </div>
 </div>
-</body>
-
-<footer>
-      @include('layouts.footer')
-</footer>
-</html>
+@endsection
