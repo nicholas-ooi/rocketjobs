@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('sidebar');
 });
 
 Route::get('user/{id}', 'UserController@showProfile');
