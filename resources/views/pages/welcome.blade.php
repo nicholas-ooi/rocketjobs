@@ -3,7 +3,7 @@
 <head>
   <title>RocketJobs</title>
   <link rel="stylesheet" href="{{ URL::asset('/public/css/semantic.css') }}" />
-  
+
   <link rel="stylesheet" type="text/css" href="{{ URL::asset('/public/components/reset.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ URL::asset('/public/components/site.css') }}">
 
@@ -139,20 +139,21 @@
 </head>
 <body>
 
-  @section('sidebar')
-  @show
+  @include('layouts.sidebar')
+  <!-- @section('sidebar')
+  @show -->
 
-  @section('followingnavbar')
-  @endsection
+  <!-- @section('followingnavbar')
+  @show -->
 
 
 <!-- Page Contents -->
 <div class="pusher">
   <div class="ui inverted vertical masthead center aligned segment">
 
-    @section('topnavbar')
-    @endsection 
-    
+    <!-- @section('topnavbar')
+    @show -->
+
 
     <div class="ui text container">
       <h1 class="ui inverted header">

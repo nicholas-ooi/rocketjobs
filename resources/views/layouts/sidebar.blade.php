@@ -1,5 +1,3 @@
-@extends('layouts.welcome')
-
 @section('sidebar')
 	@parent
 	<!-- Sidebar Menu -->

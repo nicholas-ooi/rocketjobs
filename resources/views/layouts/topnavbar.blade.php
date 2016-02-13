@@ -1,10 +1,10 @@
 @extends('layouts.welcome')
 
 @section('topnavbar')
-	@parent 
+	@parent
 	<div class="ui container">
       <div class="ui large secondary inverted pointing menu">
-        
+
         <a class="item">Home</a>
         <a class="item">Work</a>
         <a class="item">Company</a>
