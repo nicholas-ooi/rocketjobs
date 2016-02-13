@@ -1,3 +1,6 @@
+.following-menu.ui.large.top.fixed.hidden.menu {
+  display: none; }
+
 .masthead.segment {
   min-height: 700px;
   padding: 1em 0em;

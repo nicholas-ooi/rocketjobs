@@ -4,7 +4,7 @@
   @include('layouts.header')
 </head>
 <body>
-@include('layouts.topnavbar')
+@include('layouts.followingnavbar')
 @yield('content')
 </body>
 <footer>
