@@ -33,6 +33,7 @@ class AddAuthorToTestimonialsTable extends Migration
         //Dropping them
         if (Schema::hasTable('testimonials')) {
             Schema::table('testimonials', function ($table) {
+                $table->dropForeign('testimonials_author_id_foreign');
                 $table->dropColumn('author_id');
 
             });

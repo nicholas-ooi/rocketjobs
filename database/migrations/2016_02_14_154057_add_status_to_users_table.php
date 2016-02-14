@@ -36,7 +36,7 @@ class AddStatusToUsersTable extends Migration
         {
             Schema::table('users', function($table)
             {
-                $table->string('status');
+                $table->dropColumn('status');
             });
         }
     }

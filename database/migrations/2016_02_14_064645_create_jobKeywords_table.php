@@ -31,6 +31,6 @@ class CreateJobKeywordsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('jobKeywords');
+        Schema::drop('job_keywords');
     }
 }
