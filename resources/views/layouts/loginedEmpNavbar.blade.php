@@ -18,11 +18,11 @@
 </script>
 
 <div class="user-home ui left demo vertical inverted sidebar labeled icon menu">
-	<a class="item">
+	<a class="item" href="{{url('/')}}">
 		<i class="home icon"></i>
 		Home
 	</a>
-	<a class="item">
+	<a class="item" >
 		<i class="history icon"></i>
 		History
 	</a>
@@ -30,7 +30,7 @@
 		<i class="block layout icon"></i>
 		Postings
 	</a>
-	<a class="item">
+	<a class="item" href="{{url('/jobs/search')}}">
 		<i class="search icon"></i>
 		Search Jobs
 	</a>
