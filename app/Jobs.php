@@ -8,7 +8,7 @@ class Jobs extends Model
 {
     public function user()
     {
-      return $this->belongsTo('App\User');
+      return $this->belongsTo('App\User',"employer_id");
     }
 
     public function images()
@@ -18,7 +18,7 @@ class Jobs extends Model
 
     public function keywords()
     {
-        return $this->hasMany('App\jobKeywords');
+        return $this->hasMany('App\jobKeywords',"job_id");
     }
 
 }
