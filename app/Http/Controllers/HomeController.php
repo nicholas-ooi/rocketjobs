@@ -13,9 +13,15 @@ class HomeController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             if ($user->type === 'employer') {
-              return view('pages.employerDashboard',array("user"=>$user));
+
+              $jobs = Jobs::where("employer_id","=",$user->id)->get();
+
+              return view('pages.employerDashboard',array("user"=>$user,"jobs"=>$jobs));
             } else if ($user->type === 'employee') {
-                return view('pages.employeeDashboard',array("user"=>$user));
+
+
+              $jobs = Jobs::orderByRaw("RAND()")->get();
+                return view('pages.employeeDashboard',array("user"=>$user,"jobs"=>$jobs));
             } else {
                 $jobs = Jobs::all();
                 return view('pages.HomeController', array("jobs" => $jobs));

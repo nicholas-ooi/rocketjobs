@@ -14,78 +14,48 @@
 <div class="employee-home container">
 	<h1>Your recommended Jobs</h1>
 	<div class="user-home ui stackable cards centered grid container">
+		@foreach ($jobs as $job)
 		<div class="ui card five wide column">
 			<div class="content">
-				<div class="header">Front end developer</div>
+				<div class="header">{{$job->title}}</div>
 			</div>
 			<div class="content">
-				<h4 class="ui sub header">14 Feb 2016 / 9am - 7pm</h4>
+				<h4 class="ui sub header">{{date('F d, Y', strtotime($job->created_at))}}</h4>
 				<div class="ui small feed">
 					<div class="event">
 						<div class="content">
 							<div class="summary">
-								<p>Company: NewTech</p>
-								<p>Employer: Smith T.</p>
-								<p>Venue: Galvanize</p>
-								<p>$120/day</p>
-								<p>Desc: Debug website</p>
+								@foreach ($job->images as $image)
+								<img style="float:left;" src="{{ asset('public/images/job/'.$image->src) }}" alt="" />
+								@endforeach
+								<div style="float:left;padding-left:10px;">
+								<p>Company : {{$job->company}}</p>
+								<p>Employer : {{$job->user->name}}</p>
+								<p>Venue : {{$job->venue}}</p>
+								<p>{{$job->amount}}/Hours</p>
+							</div>
+								<div style="clear:both;padding-top:10px;"></div>
+
+								@foreach ($job->keywords->take(3) as $keyword)
+								<a class="ui blue label">
+									{{$keyword->keyword}}
+								</a>
+								@endforeach
+								<p style="padding-top:10px;">
+									{{$job->description}}
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="extra content">
+
 				<button class="ui button">Request</button>
-			</div>
 		</div>
-		<div class="ui card five wide column">
-			<div class="content">
-				<div class="header">Waiter</div>
-			</div>
-			<div class="content">
-				<h4 class="ui sub header">16 Feb 2016 / 9am - 10pm</h4>
-				<div class="ui small feed">
-					<div class="event">
-						<div class="content">
-							<div class="summary">
-								<p>Company: Grill&Cook</p>
-								<p>Employer: Tom C.</p>
-								<p>Venue: SF</p>
-								<p>$100/day</p>
-								<p>Desc: Replace waiter who took sudden leave</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="extra content">
-				<button class="ui button"><a href="">Request</a></button>
-			</div>
-		</div>
-		<div class="ui card five wide column">
-			<div class="content">
-				<div class="header">QA Assistant</div>
-			</div>
-			<div class="content">
-				<h4 class="ui sub header">14 Feb 2016 / 9am - 7pm</h4>
-				<div class="ui small feed">
-					<div class="event">
-						<div class="content">
-							<div class="summary">
-								<p>Company: CoolTech</p>
-								<p>Employer: </p>
-								<p>Venue: San Jose</p>
-								<p>$150/day</p>
-								<p>Desc: Replace waiter who took sudden leave</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="extra content">
-				<button class="ui button"><a href="">Request</a></button>
-			</div>
-		</div>
+	</div>
+		
+		@endforeach
 	</div>
 </div>
 

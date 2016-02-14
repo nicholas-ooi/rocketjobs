@@ -21,7 +21,7 @@
 			<div class="header">{{$job->title}}</div>
 		</div>
 		<div class="content">
-			<h4 class="ui sub header">{{$job->created_at}}</h4>
+			<h4 class="ui sub header">{{date('F d, Y', strtotime($job->created_at))}}</h4>
 			<div class="ui small feed">
 				<div class="event">
 					<div class="content">
@@ -33,7 +33,7 @@
 							<p>Company : {{$job->company}}</p>
 							<p>Employer : {{$job->user->name}}</p>
 							<p>Venue : {{$job->venue}}</p>
-							<p>{{$job->amount}}/{{$job->payment_timeline}}</p>
+							<p>{{$job->amount}}/Hours</p>
 							@foreach ($job->keywords->take(3) as $keyword)
 							<a class="ui blue label">
 								{{$keyword->keyword}}
