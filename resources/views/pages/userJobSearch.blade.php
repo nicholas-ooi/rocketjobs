@@ -48,7 +48,7 @@
 			</div>
 		</div>
 		<div class="extra content">
-			<button class="ui button">Chat with employer</button>
+			<button class="ui button">Request</button>
 		</div>
 	</div>
 	@endforeach
