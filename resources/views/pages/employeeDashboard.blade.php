@@ -35,7 +35,7 @@
 				</div>
 			</div>
 			<div class="extra content">
-				<button class="ui button">Chat with employer</button>
+				<button class="ui button">Request</button>
 			</div>
 		</div>
 		<div class="ui card five wide column">
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			<div class="extra content">
-				<button class="ui button">Chat with employer</button>
+				<button class="ui button"><a href="">Request</a></button>
 			</div>
 		</div>
 		<div class="ui card five wide column">
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 			<div class="extra content">
-				<button class="ui button">Chat with employer</button>
+				<button class="ui button"><a href="">Request</a></button>
 			</div>
 		</div>
 	</div>

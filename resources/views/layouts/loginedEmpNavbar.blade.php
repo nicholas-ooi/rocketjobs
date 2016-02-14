@@ -22,17 +22,13 @@
 		<i class="home icon"></i>
 		Home
 	</a>
-	<a class="item" >
-		<i class="history icon"></i>
-		History
+	<a class="item" href="{{url('/jobs/new')}}">
+		<i class="spy icon"></i>
+		Add Job
 	</a>
 	<a class="item">
-		<i class="block layout icon"></i>
-		Postings
-	</a>
-	<a class="item" href="{{url('/jobs/search')}}">
-		<i class="search icon"></i>
-		Search Jobs
+		<i class="add user icon"></i>
+		Applicants 
 	</a>
 	<a class="item">
 		<i class="write icon"></i>

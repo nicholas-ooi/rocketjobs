@@ -16,6 +16,9 @@ class HomeController extends Controller
               return view('pages.employerDashboard');
             } else if ($user->type === 'employee') {
                 return view('pages.employeeDashboard');
+            } else {
+                $jobs = Jobs::all();
+                return view('pages.HomeController', array("jobs" => $jobs));
             }
         }
         else {
