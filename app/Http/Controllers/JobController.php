@@ -23,14 +23,11 @@ class JobController extends Controller
     public function addJob(Request $request)
     {
         $user = Auth::User();
-        var_dump($user);
-        die();
         $job = new Jobs();
         $job->employer_id = $user->id;
         $job->title = $request->input('title');
         $job->description = $request->input('description');
-        $job = $job->save();
-
+        $job->save();
         $imageName = $job->id.".". $request->file('image')->getClientOriginalExtension();
 
         $request->file('image')->move(

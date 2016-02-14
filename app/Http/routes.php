@@ -22,8 +22,7 @@ Route::get('/login_1', function () {
 Route::get('user/{id}', 'UserController@showProfile');
 Route::get('alchemy', 'AlchemyController@showResult');
 
-Route::get('newJob', 'JobController@getNewJob');
-Route::post('addJob', 'JobController@addJob');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +43,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('user/{id}', 'UserController@showProfile');
+    Route::get('newJob', 'JobController@getNewJob');
+    Route::post('addJob', 'JobController@addJob');
 
     Route::get('/', function () {
         return view('pages.userHome');
