@@ -12,6 +12,7 @@ class HomeController extends Controller
 
         if (Auth::check()) {
             $user = Auth::user();
+            $user->status = 'available';
             if ($user->type === 'employer') {
 
               $jobs = Jobs::where("employer_id","=",$user->id)->get();
@@ -24,7 +25,7 @@ class HomeController extends Controller
                 return view('pages.employeeDashboard',array("user"=>$user,"jobs"=>$jobs));
             } else {
                 $jobs = Jobs::all();
-                return view('pages.HomeController', array("jobs" => $jobs));
+                return view('pages.home', array("jobs" => $jobs));
             }
         }
         else {

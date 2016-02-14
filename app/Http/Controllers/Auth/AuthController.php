@@ -67,8 +67,20 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'type' => $data["userType"] 
-
+            'type' => $data["userType"],
+            'status' => 'available',
         ]);
+    }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function getLogout()
+    {
+        Auth::user()->status = 'offline';
+        return $this->logout();
     }
 }
