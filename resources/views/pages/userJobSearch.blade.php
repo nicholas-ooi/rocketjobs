@@ -48,8 +48,16 @@
 			</div>
 		</div>
 		<div class="extra content">
-			<button class="ui button">Request</button>
-		</div>
+			{!! Form::open(
+					array(
+							'url' => 'requestJob',
+							'class' => 'ui form',
+							'novalidate' => 'novalidate')) !!}
+											<input type="submit" class="ui button" value="Request" />
+			<input name="job_id" type="hidden"  value="{{$job->id}}" />
+			{!! Form::close() !!}
+
+	</div>
 	</div>
 	@endforeach
 	@else
