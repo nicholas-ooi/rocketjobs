@@ -9,8 +9,11 @@
 		@foreach ($jobs as $job)
 
 		<div>
+			@if ( !$job->users->isEmpty())
 			<h2>
-				{{$job->title}}
+
+					{{$job->title}}
+
 			</h2>
 			<br />
 		@foreach ($job->users as $user)
@@ -41,6 +44,7 @@
 									'novalidate' => 'novalidate')) !!}
 	        <input type="submit" class="ui basic green button" value="Approve" />
 					<input name="job_id" type="hidden"  value="{{$job->id}}" />
+			  {!! Form::hidden('user', $user) !!}
 					{!! Form::close() !!}
 
 					{!! Form::open(
@@ -50,6 +54,7 @@
 									'novalidate' => 'novalidate')) !!}
 	        <input type="submit" class="ui basic red button" value="Decline" />
 					<input name="job_id" type="hidden"  value="{{$job->id}}" />
+				  {!! Form::hidden('employee_id', $user->id) !!}
 					{!! Form::close() !!}
 
 
@@ -72,7 +77,7 @@
 	  </div>
 		@endif
 		@endforeach
-
+			@endif
 	</div>
 
 		@endforeach

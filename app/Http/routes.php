@@ -24,6 +24,8 @@ Route::get('regU', function() {
 });
 
 Route::get('getJobsJson', 'JobController@getJobsJson');
+Route::post('inbound/email', 'MailingController@inbound');
+
 
 /*
 |--------------------------------------------------------------------------

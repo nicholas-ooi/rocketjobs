@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 
 use App\Jobs;
 use Auth;
+use App\Mailing;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -46,7 +48,13 @@ class HomeController extends Controller
       $user = Auth::user();
 
       $jobs = Jobs::where("employer_id","=",$user->id)->get();
-      return view('pages.applicants',array("jobs"=>$jobs));
+        return view('pages.applicants',array("jobs"=>$jobs));
+        //Jobs
+            //id
+            //employer_id
+            //title
+            //desc
+            //users
     }
 
     public function getEmployeeJobOffers(Request $request)
@@ -59,27 +67,38 @@ class HomeController extends Controller
 
     public function approveJob(Request $request)
     {
-          $user = Auth::user();
+          $user = Auth::user(); //employer
           $job = Jobs::find($request->input("job_id"));
-
+          $employee = User::first($request->input("employee_id"));
           $job->users()->sync([$user->id => ['status' => "approved"]]);
+
+
+        $mailing = new Mailing();
+        $mailing->sendApprovedOrDenied($employee, $user, $job, 'Approved');
           return redirect('/applicants');
     }
 
     public function declineJob(Request $request)
     {
-          $user = Auth::user();
+          $user = Auth::user(); //employer
           $job = Jobs::find($request->input("job_id"));
+        $employee = User::first($request->input("employee_id"));
           $job->users()->sync([$user->id => ['status' => "decline"]]);
+        $mailing = new Mailing();
+        $mailing->sendApprovedOrDenied($employee, $user, $job, 'Approved');
           return redirect('/applicants');
     }
 
+    //From employee
     public function requestJob(Request $request)
     {
-          $user = Auth::user();
-          $job = Jobs::find($request->input("job_id"));
-          $job->users()->attach($user->id,['status' => "requesting"]);
-          return redirect('/');
+
+        $user = Auth::user(); //employee
+        $job = Jobs::find($request->input("job_id"));
+        $job->users()->attach($user->id,['status' => "requesting"]);
+        $mailing = new Mailing();
+        $mailing->sendRequest($user, $job->user, $job);
+        return redirect('/');
     }
 
     public function searchJob(Request $request)
