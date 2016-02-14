@@ -121,14 +121,17 @@ class JobController extends Controller
     $textApi = new TextApi($apiClient);
 
     $keywords = $textApi->getKeywordsForText($job->description,"en_associative");
-    foreach ($keywords as $key) {
-      $jobKey = new JobKeywords();
-      $jobKey->job_id = $job->id;
-      $jobKey->keyword = $key;
-      $jobKey->score = "";
-      $jobKey->sentiment = "";
-      $jobKey->save();
-    }
+    if($keywords && isset($keywords) && count($keywords) >1)
+    {
+      foreach ($keywords as $key) {
+        $jobKey = new JobKeywords();
+        $jobKey->job_id = $job->id;
+        $jobKey->keyword = $key;
+        $jobKey->score = "";
+        $jobKey->sentiment = "";
+        $jobKey->save();
+      }
+  }
 
       Session::flash('success', 'Job added successfully.');
 
