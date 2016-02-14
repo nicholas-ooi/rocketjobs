@@ -26,6 +26,9 @@ Route::get('reg', function() {
 Route::get('regU', function() {
     return view('pages.registerUser');
 });
+
+Route::get('getJobsJson', 'JobController@getJobsJson');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

@@ -5,36 +5,95 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Jobs;
-use Auth;
+use App\Libraries\AlchemyAPI;
 
+use App\JobsImages;
+use App\Jobs;
+use App\JobKeywords;
+use Auth;
+use Redirect;
+use Session;
 class JobController extends Controller
 {
-    /**
-     * Show the profile for the given user.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function getNewJob(Request $request)
+  /**
+  * Show the profile for the given user.
+  *
+  * @param  int  $id
+  * @return Response
+  */
+  public function getNewJob(Request $request)
+  {
+    return view("pages.newJob");
+  }
+
+  public function getJobsJson()
+  {
+    $jobs = Jobs::all();
+    return $jobs->toJson();
+  }
+
+
+  public function addJob(Request $request)
+  {
+
+    $alchemyapi = new AlchemyAPI("86bca693566ebe93c21c2793279a0876279399d0");
+
+
+    $user = Auth::User();
+    $job = new Jobs();
+    if($user && Auth::check())
     {
-      return view("pages.newJob");
+      $job->employer_id = $user->id;
+      $job->title = $request->input('title');
+      $job->description = $request->input('description');
+      $job->save();
+
+      $files = $request->file("images");
+      foreach($files as $file) {
+
+        $imageName = $job->id.".". $file->getClientOriginalExtension();
+
+        $file->move(base_path() . '/public/images/job/', $imageName);
+
+        $jobImage = new JobsImages();
+        $jobImage->job_id = $job->id;
+        $jobImage->src = $imageName;
+        $jobImage->save();
+
+        $response = $alchemyapi->image_keywords('url',base_path() . '/public/images/job/'.$imageName, null);
+        $keywords = $response['imageKeywords'];
+        foreach($keywords as $key)
+        {
+          $jobKey = new JobKeywords();
+          $jobKey->job_id = $job->id;
+          $jobKey->keyword = $key["text"];
+          $jobKey->score = $key["score"];
+          $jobKey->sentiment = "";
+          $jobKey->save();
+        }
+        $response = $alchemyapi->keywords('text', $job->title, array('sentiment'=>1));
+        foreach ($response['keywords'] as $key) {
+          $jobKey = new JobKeywords();
+          $jobKey->job_id = $job->id;
+          $jobKey->keyword = $key['text'];
+          $jobKey->score = $key['relevance'];
+          $jobKey->sentiment = $key['sentiment']['type'];
+          $jobKey->save();
+        }
+        $response = $alchemyapi->keywords('text', $job->description, array('sentiment'=>1));
+        foreach ($response['keywords'] as $key) {
+          $jobKey = new JobKeywords();
+          $jobKey->job_id = $job->id;
+          $jobKey->keyword = $key['text'];
+          $jobKey->score = $key['relevance'];
+          $jobKey->sentiment = $key['sentiment']['type'];
+          $jobKey->save();
+        }
+
+      }
+      Session::flash('success', 'Job added successfully.');
     }
-    public function addJob(Request $request)
-    {
-        $user = Auth::User();
-        $job = new Jobs();
-        $job->employer_id = $user->id;
-        $job->title = $request->input('title');
-        $job->description = $request->input('description');
-        $job->save();
-        $imageName = $job->id.".". $request->file('image')->getClientOriginalExtension();
+    return view("pages.newJob");
 
-        $request->file('image')->move(
-            base_path() . '/public/images/job/', $imageName
-        );
-
-        die();
-
-    }
+  }
 }

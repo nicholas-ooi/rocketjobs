@@ -16,4 +16,9 @@ class Jobs extends Model
         return $this->hasMany('App\jobImages');
     }
 
+    public function keywords()
+    {
+        return $this->hasMany('App\jobKeywords');
+    }
+
 }

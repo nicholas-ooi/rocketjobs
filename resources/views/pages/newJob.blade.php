@@ -3,6 +3,17 @@
 @section('content')
 
 <div class="register-user-form">
+
+  @if(Session::has('success'))
+
+  <div class="ui success message">
+  <i class="close icon"></i>
+  <div class="header">
+    {!! Session::get('success') !!}
+  </div>
+</div>
+  @endif
+
   {!! Form::open(
       array(
           'url' => 'addJob',
@@ -24,7 +35,7 @@
       </div>
       <label>Upload Job Images</label>
       <div class="field">
-        {!! Form::file('image', null) !!}
+        {!! Form::file('images[]', array('multiple'=>true)) !!}
       </div>
   </div>
   {!! Form::submit('Add Job') !!}
