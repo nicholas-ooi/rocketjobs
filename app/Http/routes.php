@@ -12,6 +12,7 @@
 */
 
 
+
 Route::get('alchemy', 'AlchemyController@showResult');
 
 
