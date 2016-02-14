@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('layouts.loginednavbar')
+@include('layouts.loginedUserNavbar')
 
 <div class="register-user-form">
 

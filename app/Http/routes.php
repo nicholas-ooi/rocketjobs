@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/a', function () {
-    return view('pages.home');
+Route::get('/employeeHome', function () {
+    return view('pages.employeeHome');
 });
 
 Route::get('alchemy', 'AlchemyController@showResult');
@@ -54,6 +54,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('searchJobs', 'HomeController@searchJob');
 
     Route::post('api/add_testimonial', 'UserController@addTestimonial');
-    Route::get('/', 'HomeController@show');
+    // Route::get('/', 'HomeController@show');
+
+    Route::get('/', function () {
+	    return view('pages.employeeHome');
+	});
 
 });

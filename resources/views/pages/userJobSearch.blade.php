@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('layouts.loginednavbar')
+@include('layouts.loginedUserNavbar')
 
 {!! Form::open(array('url' => 'searchJobs', "method"=>"get")) !!}
 <div class="user-home ui icon input container">
