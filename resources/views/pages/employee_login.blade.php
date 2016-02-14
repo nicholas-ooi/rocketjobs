@@ -3,10 +3,11 @@
 @section('content')
 
 <div class="pusher">
-  <div class="ui inverted vertical masthead center aligned segment">
+  <div class="employee ui inverted vertical masthead center aligned segment">
 
     @include('layouts.topnavbar')
-      <div class="ui raised very padded text container segment">
+    <form action="/login" method="get">
+      <div class="employee ui raised very padded text container segment">
         <div class="ui two column middle aligned very relaxed stackable grid">
           <div class="column">
             <div class="ui form">
@@ -38,8 +39,7 @@
           </div>
         </div>
       </div>
+    </form>
     </div>
     </div>
-  </div>
-</div>
 @endsection
