@@ -4,8 +4,6 @@
 
 @include('layouts.topnavbarWhite')
 
-
-
 <div class="register-form-title ui text container">
   <h1>Need manpower?</h1>
 </div>

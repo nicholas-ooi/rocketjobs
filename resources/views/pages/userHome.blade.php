@@ -4,7 +4,9 @@
 
 @include('layouts.loginednavbar')
 
+
 <div class="user-home ui icon input container">
+
 	<input type="text" placeholder="Search for jobs">
 	<i class="big arrow circle outline right icon"></i>
 </div>
@@ -69,7 +71,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="extra content">
+		<div class="extra">
 			<button class="ui button">Chat with employer</button>
 		</div>
 	</div>

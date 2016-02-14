@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('layouts.loginednavbar')
+
 <div class="register-user-form">
 
   @if(Session::has('success'))
@@ -22,10 +24,10 @@
           'files' => true)) !!}
 
             <h4 class="ui dividing header">
-              Add a new Job
+              New RocketJobs Posting
             </h4>
   <div class="field">
-    <label>Job Name</label>
+    <label>Job Title</label>
       <div class="field">
             {!! Form::text('title', null, array('placeholder'=>'1234')) !!}
       </div>
@@ -33,7 +35,7 @@
       <div class="field">
             {!! Form::textarea('description', null, array('placeholder'=>'1234')) !!}
       </div>
-      <label>Upload Job Images</label>
+      <label>Upload Workplace Image(s)</label>
       <div class="field">
         {!! Form::file('images[]', array('multiple'=>true)) !!}
       </div>

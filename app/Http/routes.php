@@ -50,7 +50,11 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('user/{id}', 'UserController@showProfile');
     Route::get('newJob', 'JobController@getNewJob');
     Route::post('addJob', 'JobController@addJob');
-
     Route::get('/', 'HomeController@show');
+
+    Route::get('/', function () {
+        return view('pages.newJob');
+    });
+
 
 });

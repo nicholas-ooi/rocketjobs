@@ -40,13 +40,20 @@ i.big.sidebar.icon {
     text-align: center !important; }
 
 /* Register User page CSS */
-.register-form-title h1 {
-  margin-top: 30px !important;
-  font-size: 50px;
-  text-align: center; }
-
+/*.register-form-title {
+  h1 {
+    margin-top: 30px !important;
+    font-size: 50px;
+    text-align: center;
+  }
+}
+*/
 .register-user-form {
-  margin: 50px; }
+  margin: 60px; }
+  .register-user-form .ui.dividing.header {
+    font-size: 35px;
+    padding-bottom: 30px;
+    margin-top: -20px; }
 
 /* User home page css */
 .user-home {

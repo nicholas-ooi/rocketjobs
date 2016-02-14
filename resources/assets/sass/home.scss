@@ -56,17 +56,25 @@ i.big.sidebar.icon {
 }
 
 /* Register User page CSS */
-.register-form-title {
+/*.register-form-title {
   h1 {
     margin-top: 30px !important;
     font-size: 50px;
     text-align: center;
   }
 }
-
+*/
 .register-user-form {
-  margin: 50px;
+  margin: 60px;
+
+  .ui.dividing.header {
+    font-size: 35px;
+    padding-bottom: 30px;
+    margin-top: -20px;
+  }
 }
+
+
 
 /* User home page css */
 .user-home {
