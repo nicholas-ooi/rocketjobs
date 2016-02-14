@@ -31,6 +31,18 @@
       <div class="field">
             {!! Form::text('title', null, array('placeholder'=>'Title')) !!}
       </div>
+      <label>Company</label>
+      <div class="field">
+        {!! Form::text('company', null, array('placeholder'=>'Company')) !!}
+      </div>
+      <label>Venue</label>
+      <div class="field">
+        {!! Form::text('venue', null, array('placeholder'=>'Venue')) !!}
+      </div>
+      <label>Amount</label>
+      <div class="field">
+        {!! Form::text('amount', null, array('placeholder'=>'Amount')) !!}
+      </div>
       <label>Job Description</label>
       <div class="field">
             {!! Form::textarea('description', null, array('placeholder'=>'Description')) !!}

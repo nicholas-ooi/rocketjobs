@@ -48,8 +48,12 @@ class JobController extends Controller
       $job->employer_id = $user->id;
       $job->title = $request->input('title');
       $job->description = $request->input('description');
+      $job->venue = $request->input('venue');
+      $job->amount = $request->input('amount');
+      $job->company = $request->input('company');
       $job->save();
 
+      $files = [];
       try {
         $files = $request->file("images");
       } catch (\Exception $e) {
@@ -66,7 +70,10 @@ class JobController extends Controller
         $jobImage->save();
 
         $response = $alchemyapi->image_keywords('url',base_path() . '/public/images/job/'.$imageName, null);
+        if(isset($response['imageKeywords']))
+        {
         $keywords = $response['imageKeywords'];
+
         foreach($keywords as $key)
         {
           $jobKey = new JobKeywords();
@@ -77,9 +84,10 @@ class JobController extends Controller
           $jobKey->save();
         }
       }
+    }
 
       $response = $alchemyapi->keywords('text', $job->title, array('sentiment'=>1));
-      if($response["keywords"])
+      if(isset($response['keywords']))
       {
       foreach ($response['keywords'] as $key) {
         $jobKey = new JobKeywords();
@@ -90,7 +98,7 @@ class JobController extends Controller
         $jobKey->save();
       }
     }
-    if($response["keywords"])
+    if(isset($response['keywords']))
     {
       $response = $alchemyapi->keywords('text', $job->description, array('sentiment'=>1));
       foreach ($response['keywords'] as $key) {

@@ -3,10 +3,11 @@
   <div class="ui container">
     <a class="active item" href={{ url('/') }}>RocketJobs</a>
     <div class="right menu">
-      <div class="item">
-        <a class="ui button">I'm Hiring!</a>
-      </div>
+
       @if (!Auth::check())
+      <div class="item">
+        <a class="ui button" href="{{ url('/login') }}">I'm Hiring!</a>
+      </div>
       <div class="item">
         <a class="ui button" href={{ url('/login') }}>Login</a>
       </div>

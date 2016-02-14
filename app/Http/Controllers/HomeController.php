@@ -13,10 +13,9 @@ class HomeController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             if ($user->type === 'employer') {
-
-            } else {
-                $jobs = Jobs::all();
-                return view('pages.home', array("jobs" => $jobs));
+              return view('pages.employerDashboard');
+            } else if ($user->type === 'employee') {
+                return view('pages.employeeDashboard');
             }
         }
         else {
@@ -30,7 +29,7 @@ class HomeController extends Controller
         $searchValue =  $request->input('searchValue');
         $jobs = Jobs::join('job_keywords', 'jobs.id', '=', 'job_keywords.job_id')
         ->where('title', 'LIKE', "%$searchValue%")
-        ->where('keyword', 'LIKE', "%$searchValue%")
+        ->orWhere('keyword', 'LIKE', "%$searchValue%")
         ->select("jobs.*")
         ->groupBy('jobs.id')
         ->get();
