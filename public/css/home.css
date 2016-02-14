@@ -66,7 +66,7 @@ i.big.sidebar.icon {
 .homeone.ui.vertical.segment {
   width: 100% !important;
   height: 100% !important;
-  background-image: url("/testingsite/resources/assets/images/home1.jpg");
+  background-image: url("/public/images/home1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -74,7 +74,7 @@ i.big.sidebar.icon {
 .hometwo.ui.vertical.segment {
   width: 100% !important;
   height: 100% !important;
-  background-image: url("/testingsite/resources/assets/images/home2.jpg");
+  background-image: url("/public/images/home2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
