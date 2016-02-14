@@ -2,8 +2,9 @@
 
 @section('content')
 
-@include('layouts.loginednavbar')
-<div class="eprofile ui centered card">
+@include('layouts.loginedUserNavbar')
+<div class="eprofile ui container">
+<div class="ui centered card">
   <div class="image">
     <img src="/images/avatar2/large/kristy.png">
   </div>
@@ -22,6 +23,7 @@
       22 Friends
     </a>
   </div>
+</div>
 </div>
 
 @endsection

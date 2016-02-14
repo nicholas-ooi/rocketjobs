@@ -16,7 +16,7 @@ class HomeController extends Controller
 
             } else {
                 $jobs = Jobs::all();
-                return view('pages.employeeHome', array("jobs" => $jobs));
+                return view('pages.home', array("jobs" => $jobs));
             }
         }
         else {

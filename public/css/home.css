@@ -93,7 +93,6 @@ i.big.sidebar.icon {
   width: 100%; }
 
 /*employee login css*/
-> > > > > > > Adding user dashboard for linh
 .employee.ui.container {
   width: 1127px;
   margin-left: auto !important;
@@ -108,5 +107,10 @@ i.big.sidebar.icon {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+
+.eprofile.ui.container {
+  width: 1000px;
+  height: 700px;
+  background-color: lightblue; }
 
 /*# sourceMappingURL=home.css.map */

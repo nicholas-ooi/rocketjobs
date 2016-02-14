@@ -1,7 +1,7 @@
- <div class="ui container">
+ <div class="nav fixed ui container">
     <div class="ui large secondary pointing menu">
     	<div>
-			<i class="big sidebar icon" onClick="runSidebar();"></i>	
+			<i class="big sidebar icon" onClick="runSidebar();"></i>
 		</div>
     	<a class="item" href="{{url('/')}}">RocketJobs <i class="large rocket icon"></i></a>
    		<div class="right item">

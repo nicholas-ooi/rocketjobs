@@ -11,7 +11,9 @@
 |
 */
 
-
+Route::get('/a', function () {
+     return view('pages.employeeprofile');
+ });
 
 Route::get('alchemy', 'AlchemyController@showResult');
 
