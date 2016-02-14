@@ -62,7 +62,13 @@
 
 				@foreach ($job->users as $jobPost)
 				@if ($jobPost->pivot->status == "requesting")
-					<input disabled="disabled" type="submit" class="ui button" value="Requested" />
+					<input disabled="disabled" type="button" class="ui button" value="Requested" />
+				@endif
+				@if ($jobPost->pivot->status == "approved")
+					<input disabled="disabled" type="button" class="ui green button" value="Approved" />
+				@endif
+				@if ($jobPost->pivot->status == "decline")
+					<input disabled="disabled" type="button" class="ui red button" value="Decline" />
 				@endif
 				@endforeach
 		</div>
