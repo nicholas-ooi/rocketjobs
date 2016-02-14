@@ -6,7 +6,6 @@
         <div class="employee ui inverted vertical masthead center aligned segment">
 
             @include('layouts.topnavbar')
-            <form role="form" method="POST" action="{{ url('/login') }}">
                 <div class="employee ui raised very padded text container segment">
                     <div class="ui two column middle aligned very relaxed stackable grid">
                         <div class="column">
@@ -93,7 +92,6 @@
                         </div>
                     </div>
                 </div>
-            </form>
         </div>
     </div>
 

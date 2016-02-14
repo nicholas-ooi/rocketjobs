@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('user/{id}', 'UserController@showProfile');
 Route::get('alchemy', 'AlchemyController@showResult');
 
 
@@ -49,8 +48,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('newJob', 'JobController@getNewJob');
     Route::post('addJob', 'JobController@addJob');
 
-    Route::get('/', function () {
-        return view('pages.userHome');
-    });
+    Route::get('/', 'HomeController@show');
 
 });

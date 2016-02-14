@@ -12,7 +12,7 @@ i.big.sidebar.icon {
 .masthead.segment {
   min-height: 700px;
   padding: 1em 0em;
-  background-image: url("/resources/assets/images/home1.jpg"); }
+  background-image: url("/public/images/home1.jpg"); }
   .masthead.segment .ui.menu .ui.button {
     margin-left: 0.5em; }
   .masthead.segment h1.ui.header {
@@ -69,9 +69,9 @@ i.big.sidebar.icon {
 .employee.ui.vertical.segment {
   width: 100% !important;
   height: 100% !important;
-  background-image: url("/testingsite/resources/assets/images/login.jpg");
+  background-image: url("/public/images/login.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-}
+  background-position: center; }
+
 /*# sourceMappingURL=home.css.map */
