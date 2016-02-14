@@ -50,17 +50,22 @@
 				</div>
 			</div>
 			<div class="extra content">
-				{{$job->getStatus()}}
-				@if ($job->getStatus() != "requesting")
+				@if(count($job->users) <=0 )
 				{!! Form::open(
-			      array(
-			          'url' => 'requestJob',
-			          'class' => 'ui form',
-			          'novalidate' => 'novalidate')) !!}
+						array(
+								'url' => 'requestJob',
+								'class' => 'ui form',
+								'novalidate' => 'novalidate')) !!}
 												<input type="submit" class="ui button" value="Request" />
 				<input name="job_id" type="hidden"  value="{{$job->id}}" />
 				{!! Form::close() !!}
 				@endif
+
+				@foreach ($job->users as $jobPost)
+				@if ($jobPost->pivot->status == "requesting")
+					<input disabled="disabled" type="submit" class="ui button" value="Requested" />
+				@endif
+				@endforeach
 		</div>
 	</div>
 

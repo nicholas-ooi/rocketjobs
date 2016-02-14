@@ -13,19 +13,6 @@ class Jobs extends Model
     	->withTimestamps();
   }
 
-  public function getStatus()
-  {
-    $users = $this->users();
-    foreach($users as $user)
-    {
-      if($user->pivot->status == "requesting")
-      {
-        return "requesting";
-      }
-
-    }
-    return "";
-  }
 
     public function user()
     {
