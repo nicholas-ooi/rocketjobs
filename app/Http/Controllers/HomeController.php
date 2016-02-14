@@ -13,9 +13,9 @@ class HomeController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             if ($user->type === 'employer') {
-              return view('pages.employerDashboard');
+              return view('pages.employerDashboard',array("user"=>$user));
             } else if ($user->type === 'employee') {
-                return view('pages.employeeDashboard');
+                return view('pages.employeeDashboard',array("user"=>$user));
             } else {
                 $jobs = Jobs::all();
                 return view('pages.HomeController', array("jobs" => $jobs));

@@ -66,25 +66,14 @@
                                     </div>
                                         @endif
                                 </div>
-                                <div class="ui fluid selection dropdown">
-                                  <i class="dropdown icon"></i>
-                                  <span class="default text">Select Account Type</span>
-                                  <div class="menu">
-                                    <div class="item" data-type="employee">
-                                      <i class="attention right floated icon"></i>
-                                      Employee
-                                    </div>
-                                    <div class="item" data-type="employer">
-                                      <i class="comment right floated icon"></i>
-                                      Employer
-                                    </div>
-                                  </div>
-                                </div>
+                                <select name="userType" class="ui dropdown">
+                                          <option value="employee">Employee</option>
+                                            <option value="employer">Employer</option>
+                                  </select>
                                 <p/>
                                 <div class="field">
                                     <div class=" ui left icon input">
                                         <button type="submit" class="ui green submit button">
-
                                             Sign Up
                                         </button>
                                     </div>

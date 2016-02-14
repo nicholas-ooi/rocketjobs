@@ -5,7 +5,7 @@
 		</div>
     	<a class="item" href="{{url('/')}}">RocketJobs <i class="large rocket icon"></i></a>
    		<div class="right item">
-    		<a class="ui button">Welcome See Ting!</a>
+    		<a class="ui button">{{Auth::user()->name}}</a>
         	<a class="ui button" href="{{url('/logout')}}">Logout</a>
     	</div>
     </div>
@@ -28,7 +28,7 @@
 	</a>
 	<a class="item">
 		<i class="add user icon"></i>
-		Applicants 
+		Applicants
 	</a>
 	<a class="item">
 		<i class="write icon"></i>
