@@ -80,7 +80,9 @@ class AuthController extends Controller
 
     public function getLogout()
     {
-        Auth::user()->status = 'offline';
-        return $this->logout();
+      $user = Auth::user();
+      $user->status = 'unavailable';
+      $user->save();
+      return $this->logout();
     }
 }

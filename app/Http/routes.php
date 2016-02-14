@@ -55,6 +55,16 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/declineJob', 'HomeController@declineJob');
     Route::get('/applicants', 'HomeController@getApplicants');
 
+    Route::get('/logout', function()
+    {
+        $user = Auth::user();
+        $user->status = 'unavailable';
+        $user->save();
+        Auth::logout();
+        
+        return Redirect::to('/');
+    });
+
  //    Route::get('/', function () {
 	//     return view('pages.applicants');
 	// });

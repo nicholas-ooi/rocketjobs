@@ -13,6 +13,7 @@ class HomeController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             $user->status = 'available';
+            $user->save();
             if ($user->type === 'employer') {
 
               $jobs = Jobs::where("employer_id","=",$user->id)->get();
