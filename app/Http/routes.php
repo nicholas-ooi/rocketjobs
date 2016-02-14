@@ -22,6 +22,8 @@ Route::get('/login_1', function () {
 Route::get('user/{id}', 'UserController@showProfile');
 Route::get('alchemy', 'AlchemyController@showResult');
 
+Route::get('newJob', 'JobController@getNewJob');
+Route::post('addJob', 'JobController@addJob');
 
 /*
 |--------------------------------------------------------------------------
