@@ -23,12 +23,12 @@
   <h1 class="home ui inverted header">How It Works?</h1>
   <div class="home-buttons ui two column grid centered center aligned">
     <div class="home row">
-      <div class="four wide column">Search nearby rocket jobs</div>
-      <div class="four wide column">Accept the offer</div>
+      <div class="four wide column">1. Search Nearby Rocketjobs</div>
+      <div class="four wide column">2. Accept the Offer</div>
     </div>
     <div class="home row">
-      <div class="four wide column">Receive confirmation</div>
-      <div class="four wide column">Happy Rocketjob-ing</div>
+      <div class="four wide column">3. Receive Confirmation</div>
+      <div class="four wide column">4. Happy Rocketjob-ing</div>
     </div>
   </div>
 </div>
