@@ -22,6 +22,8 @@
     border: 1px solid #F1741F;
     background-color: white;
     margin-left: 10px; }
+  .nav.ui.container a.rocket.item {
+    color: black !important; }
 
 i.big.sidebar.icon {
   margin-top: 10px;
@@ -92,17 +94,6 @@ i.big.sidebar.icon {
     background-color: #F1741F; }
     .user-job-search.ui.stackable.cards.centered.grid.container .ui.card.five.wide.column .content.header .header {
       color: white; }
-
-.home.ui.container {
-  height: auto;
-  width: auto;
-  margin-top: 200px; }
-
-.tagline.ui.container {
-  height: 50px;
-  width: auto;
-  text-align: center;
-  font-size: 30px; }
 
 /* User home page css */
 .user-home {

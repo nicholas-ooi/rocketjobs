@@ -36,6 +36,10 @@ $themeTeal: teal;
       margin-left: 10px;
     }
   }
+
+  a.rocket.item{
+    color: black !important;
+  }
 }
 
 i.big.sidebar.icon {
@@ -124,6 +128,8 @@ i.big.sidebar.icon {
     opacity: 0.9;
   }
 }
+
+
 
 /* user job search */
 .user-job-search.ui.stackable.cards.centered.grid.container {
