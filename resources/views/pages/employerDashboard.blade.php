@@ -4,12 +4,6 @@
 
 @include('layouts.loginedEmpNavbar')
 
-
-<div class="employee-home ui icon input container">
-	<input type="text" placeholder="Search for jobs">
-	<i class="big arrow circle outline right icon"></i>
-</div>
-
 <div class="employee-home container">
 	<h1>Your Job Postings</h1>
 	<div class="user-home ui stackable cards centered grid container">

@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('layouts.loginedEmpNavbar')
+@include('layouts.loginedUserNavbar')
 
 <div class="applicants ui container centered grid">
 	<div class="ui cards">

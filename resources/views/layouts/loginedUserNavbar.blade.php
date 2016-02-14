@@ -26,6 +26,10 @@
 		<i class="search icon"></i>
 		Search Jobs
 	</a>
+	<a class="item" href="{{url('/getEmployeeJobOffers')}}">
+		<i class="child icon"></i>
+		Job Offers
+	</a>
 	<a class="item" href="#">
 		<i class="write icon"></i>
 		Update Profile
