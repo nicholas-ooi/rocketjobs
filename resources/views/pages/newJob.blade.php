@@ -52,7 +52,8 @@
         {!! Form::file('images[]', array('multiple'=>true)) !!}
       </div>
   </div>
-  {!! Form::submit('Add Job') !!}
+  <input class="add-job-button" type="submit" Value="Add Job">
+  <!--{!! Form::submit('Add Job') !!}-->
   {!! Form::close() !!}
 
 </div>

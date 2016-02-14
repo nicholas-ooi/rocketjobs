@@ -4,18 +4,12 @@
 
 @include('layouts.loginedUserNavbar')
 
-
-<div class="employee-home ui icon input container">
-	<input type="text" placeholder="Search for jobs">
-	<i class="big arrow circle outline right icon"></i>
-</div>
-
 <div class="employee-home container">
 	<h1>Your recommended Jobs</h1>
 	<div class="user-home ui stackable cards centered grid container">
 		@foreach ($jobs as $job)
 		<div class="ui card five wide column">
-			<div class="content">
+			<div class="content header">
 				<div class="header">{{$job->title}}</div>
 			</div>
 			<div class="content">

@@ -1,3 +1,7 @@
+$themeOrange: #F1741F; 
+$themeBlack: #25333C; 
+$themeTeal: teal;
+
 .following-menu.ui.large.top.fixed.hidden.menu {
   display: none;
 }
@@ -19,6 +23,19 @@
 
 .nav.ui.container{
   width: 100%;
+
+  i, a {
+    color: $themeBlack;
+  }
+
+  .topnavbarwhite.right.item {
+    .ui.button {
+      color: #themeBlack;
+      border: 1px solid $themeOrange;
+      background-color: white;
+      margin-left: 10px;
+    }
+  }
 }
 
 i.big.sidebar.icon {
@@ -70,38 +87,59 @@ i.big.sidebar.icon {
 /* new jobs CSS */
 .register-user-form {
   margin: 60px;
-  color: teal;
-
-  h4 {
-    color: teal;
-  }
-
-  .field {
-    label {
-      color: teal;
-    }
-  }
 
   .ui.dividing.header {
     font-size: 35px;
     padding-bottom: 30px;
     margin-top: -20px;
+    color: $themeOrange;
+  }
+
+  div.field {
+    label {
+      color: $themeBlack !important;
+    }
+  }
+
+  .add-job-button {
+    background-color: white;
+    border: 1px solid $themeOrange;
   }
 }
+
 .home.ui.container{
   height: auto;
   width: auto;
   margin-top: 200px;
 }
 
-<<<<<<< HEAD
 .tagline.ui.container{
   height: 50px;
-  width: auto;
+  width: 50%;
   text-align: center;
+  color: black;
+
+  h1 {
+    background-color: white;
+    opacity: 0.9;
+  }
 }
-=======
->>>>>>> Editing styles
+
+/* user job search */
+.user-job-search.ui.stackable.cards.centered.grid.container {
+  .ui.card.five.wide.column {
+    margin-top: 20px;
+    padding: 0px;
+
+    .content.header {
+      background-color: $themeOrange;
+      .header{
+        color: white;
+      }
+    }
+  }
+}
+
 /* User home page css */
 .user-home {
   margin-top: 20px !important;
@@ -141,8 +179,20 @@ i.big.sidebar.icon {
   margin-top: 20px !important;
   margin-bottom: 20px !important;
 
-  .ui.card {
+  h1, h4 {
+    color: $themeOrange;
+  }
+
+  .ui.card.five.wide.column {
     margin-top: 20px;
+    padding: 0px;
+
+    .content.header {
+      background-color: $themeOrange;
+      .header {
+        color: white;
+      }
+    }
   }
 }
 

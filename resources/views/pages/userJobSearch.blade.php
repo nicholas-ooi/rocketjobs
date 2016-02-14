@@ -12,12 +12,12 @@
 </div>
 {!! Form::close() !!}
 
-<div class="user-home ui stackable cards centered grid container">
+<div class="user-job-search ui stackable cards centered grid container">
 	@if (count($jobs) > 0)
 
 	@foreach ($jobs as $job)
 	<div class="ui card five wide column">
-		<div class="content">
+		<div class="content header">
 			<div class="header">{{$job->title}}</div>
 		</div>
 		<div class="content">
