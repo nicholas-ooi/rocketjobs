@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+Route::get('/login_1', function () {
+    return view('pages.employee_login');
+});
 
 Route::get('user/{id}', 'UserController@showProfile');
 Route::get('alchemy', 'AlchemyController@showResult');
