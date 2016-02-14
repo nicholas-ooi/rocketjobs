@@ -53,4 +53,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('api/add_job', 'JobController@addJob');
     Route::get('/', 'HomeController@show');
 
+ //    Route::get('/', function () {
+	//     return view('pages.employeeDashboard');
+	// });
+
 });
