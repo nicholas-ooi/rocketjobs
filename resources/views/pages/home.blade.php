@@ -18,6 +18,7 @@
     </div>
     </div>
   </div>
+
 <div class="hometwo ui inverted vertical masthead center aligned segment row">
   <div class="tagline ui container row">
     <h1><em>"…This is definitely the trend in the job-seeking industry!"</em></h1>
@@ -33,7 +34,9 @@
         <div class="four wide column">3. Receive Confirmation</div>
         <div class="four wide column">4. Happy Rocketjob-ing</div>
       </div>
+
     </div>
+  </div>
   </div>
 </div>
 
