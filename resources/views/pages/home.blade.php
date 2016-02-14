@@ -18,8 +18,11 @@
     </div>
     </div>
   </div>
-
+<div class="tagline ui container">
+  <h1><em>"…This is definitely the trend in the job-seeking industry!"</em></h1>
+</div>
 <div class="hometwo ui inverted vertical masthead center aligned segment">
+  <div class="home ui container">
   <h1 class="home ui inverted header">How It Works?</h1>
   <div class="home-buttons ui two column grid centered center aligned">
     <div class="home row">
@@ -30,6 +33,7 @@
       <div class="four wide column">3. Receive Confirmation</div>
       <div class="four wide column">4. Happy Rocketjob-ing</div>
     </div>
+  </div>
   </div>
 </div>
 

@@ -13,7 +13,7 @@
 
 .power.footer{
   margin-left: 400px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   float: right;
 }
 
@@ -27,7 +27,7 @@ i.big.sidebar.icon {
 .masthead.segment {
   min-height: 700px;
   padding: 1em 0em;
-  background-image: url('/public/images/home1.jpg');
+  background-image: url('/testingsite/public/images/home1.jpg');
 
   .ui.menu .ui.button {
     margin-left: 0.5em;
@@ -85,9 +85,17 @@ i.big.sidebar.icon {
     margin-top: -20px;
   }
 }
+.home.ui.container{
+  height: auto;
+  width: auto;
+  margin-top: 200px;
+}
 
-
-
+.tagline.ui.container{
+  height: 50px;
+  width: auto;
+  text-align: center;
+}
 /* User home page css */
 .user-home {
   margin-top: 20px !important;
@@ -103,7 +111,7 @@ i.big.sidebar.icon {
 .homeone.ui.vertical.segment{
   width:100% !important;
   height:100% !important;
-  background-image: url('/public/images/home1.jpg');
+  background-image: url('/testingsite/public/images/home1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -112,7 +120,7 @@ i.big.sidebar.icon {
 .hometwo.ui.vertical.segment{
   width:100% !important;
   height:100% !important;
-  background-image: url('/public/images/home2.jpg');
+  background-image: url('/testingsite/public/images/home2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -154,7 +162,7 @@ i.big.sidebar.icon {
 .employee.ui.vertical.segment{
   width:100% !important;
   height:100% !important;
-  background-image: url('/public/images/login.jpg');
+  background-image: url('/testingsite/public/images/login.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
