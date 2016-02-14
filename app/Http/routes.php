@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/a', function () {
     return view('pages.home');
 });
 

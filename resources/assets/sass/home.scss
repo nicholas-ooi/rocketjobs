@@ -48,10 +48,11 @@ i.big.sidebar.icon {
 
 	.four.wide.column {
 		padding: 50px;
-		margin: 20px;
+		margin: 100px;
 		background-color: teal;
 		color: white;
 		text-align: center !important;
+    font-size: 1.7em;
 	}
 }
 
@@ -86,13 +87,32 @@ i.big.sidebar.icon {
   }
 }
 
+// .home.ui.inverted.
+
+.homeone.ui.vertical.segment{
+  width:100% !important;
+  height:100% !important;
+  background-image: url('/testingsite/resources/assets/images/home1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hometwo.ui.vertical.segment{
+  width:100% !important;
+  height:100% !important;
+  background-image: url('/testingsite/resources/assets/images/home2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .user-home.ui.icon.input.container {
   input {
     width: 100%;
   }
 }
 
-/*employee login css*/
 .employee.ui.container {
     width: 1127px;
     margin-left: auto !important;
@@ -108,5 +128,3 @@ i.big.sidebar.icon {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
