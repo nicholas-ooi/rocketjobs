@@ -12,15 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('pages.registerUser');
-});
-
-Route::get('/home', function () {
     return view('pages.home');
 });
 
 
 Route::get('user/{id}', 'UserController@showProfile');
+Route::get('alchemy', 'AlchemyController@showResult');
 
 
 /*
@@ -36,4 +33,15 @@ Route::get('user/{id}', 'UserController@showProfile');
 
 Route::group(['middleware' => ['web']], function () {
     //
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('user/{id}', 'UserController@showProfile');
+
+    Route::get('/', function () {
+        return view('pages.home');
+    });
+
 });
