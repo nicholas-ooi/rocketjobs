@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Jobs;
+use Auth;
 
 class JobController extends Controller
 {
@@ -20,8 +22,16 @@ class JobController extends Controller
     }
     public function addJob(Request $request)
     {
+        $user = Auth::User();
+        var_dump($user);
+        die();
+        $job = new Jobs();
+        $job->employer_id = $user->id;
+        $job->title = $request->input('title');
+        $job->description = $request->input('description');
+        $job = $job->save();
 
-        $imageName = "". $request->file('image')->getClientOriginalExtension();
+        $imageName = $job->id.".". $request->file('image')->getClientOriginalExtension();
 
         $request->file('image')->move(
             base_path() . '/public/images/job/', $imageName
