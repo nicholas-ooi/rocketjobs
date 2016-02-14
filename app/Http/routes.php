@@ -46,7 +46,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('user/{id}', 'UserController@showProfile');
     Route::get('user/{id}/add_testimonial', 'UserController@showAddTestimonial');
-    Route::get('job/new', 'JobController@getNewJob');
+    Route::get('jobs/new', 'JobController@getNewJob');
     Route::get('jobs/search', 'HomeController@searchJob');
     Route::post('api/add_testimonial', 'UserController@addTestimonial');
     Route::post('api/add_job', 'JobController@addJob');

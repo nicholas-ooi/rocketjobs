@@ -4,7 +4,7 @@
 
 @include('layouts.loginedUserNavbar')
 
-{!! Form::open(array('url' => 'searchJobs', "method"=>"get")) !!}
+{!! Form::open(array('url' => 'jobs/search', "method"=>"get")) !!}
 <div class="user-home ui icon input container">
 
 	<input name="searchValue" type="text" placeholder="Search for jobs">
