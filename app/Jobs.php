@@ -13,7 +13,7 @@ class Jobs extends Model
 
     public function images()
     {
-        return $this->hasMany('App\jobImages');
+        return $this->hasMany('App\JobsImages',"job_id");
     }
 
     public function keywords()

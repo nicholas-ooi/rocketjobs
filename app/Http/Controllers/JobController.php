@@ -98,10 +98,11 @@ class JobController extends Controller
         $jobKey->save();
       }
     }
-    if(isset($response['keywords']))
-    {
+
       $response = $alchemyapi->keywords('text', $job->description, array('sentiment'=>1));
-      foreach ($response['keywords'] as $key) {
+      if(isset($response['keywords']))
+      {
+        foreach ($response['keywords'] as $key) {
         $jobKey = new JobKeywords();
         $jobKey->job_id = $job->id;
         $jobKey->keyword = $key['text'];

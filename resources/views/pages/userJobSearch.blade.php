@@ -26,6 +26,10 @@
 				<div class="event">
 					<div class="content">
 						<div class="summary">
+							@foreach ($job->images as $image)
+							<img src="{{ asset('public/images/job/'.$image->src) }}" alt="" />
+							@endforeach
+
 							<p>Company : {{$job->company}}</p>
 							<p>Employer : {{$job->user->name}}</p>
 							<p>Venue : {{$job->venue}}</p>
