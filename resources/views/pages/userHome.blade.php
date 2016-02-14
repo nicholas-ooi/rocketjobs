@@ -2,48 +2,98 @@
 
 @section('content')
 
-@include('layouts.topnavbarWhite')
-@include('layouts.sidebar')
+@include('layouts.loginednavbar')
 
-<div class="ui visible left demo vertical inverted sidebar labeled icon menu">
-  <a class="item">
-    <i class="home icon"></i>
-    Home
-  </a>
-  <a class="item">
-    <i class="block layout icon"></i>
-    Topics
-  </a>
-  <a class="item">
-    <i class="smile icon"></i>
-    Friends
-  </a>
+<div class="user-home ui icon input container">
+	<input type="text" placeholder="Search for jobs">
+	<i class="big arrow circle outline right icon"></i>
 </div>
 
-<div class="user-home ui grid container centered">
-	<div class="four-wide-column">
-		<div class="ui card">
-		  <div class="image">
-		    <img src="/images/avatar2/large/kristy.png">
-		  </div>
-		  <div class="content">
-		    <a class="header">Employer</a>
-		    <div class="meta">
-		      <span class="date">Joined in 2013</span>
-		    </div>
-		    <div class="description">
-		      Job description
-		    </div>
-		  </div>
-		  <div class="extra content">
-		    <a>
-		      <i class="user icon"></i><a class="ui inverted button">Choose</a>
-		    </a>
-		  </div>
+<div class="user-home ui stackable cards centered grid container">
+	<div class="ui card five wide column">
+		<div class="content">
+			<div class="header">Front end developer</div>
+		</div>
+		<div class="content">
+			<h4 class="ui sub header">14 Feb 2016 / 9am - 7pm</h4>
+			<div class="ui small feed">
+				<div class="event">
+					<div class="content">
+						<div class="summary">
+							<p>Venue</p>
+							<p>$10/hour</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="extra content">
+			<button class="ui button">Chat with employer</button>
 		</div>
 	</div>
+	<div class="ui card five wide column">
+		<div class="content">
+			<div class="header">Waiter</div>
+		</div>
+		<div class="content">
+			<h4 class="ui sub header">16 Feb 2016 / 9am - 10pm</h4>
+			<div class="ui small feed">
+				<div class="event">
+					<div class="content">
+						<div class="summary">
+							<p>Venue</p>
+							<p>$10/hour</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="extra content">
+			<button class="ui button">Chat with employer</button>
+		</div>
+	</div>
+	<div class="ui card five wide column">
+		<div class="content">
+			<div class="header">Front end developer</div>
+		</div>
+		<div class="content">
+			<h4 class="ui sub header">14 Feb 2016 / 9am - 7pm</h4>
+			<div class="ui small feed">
+				<div class="event">
+					<div class="content">
+						<div class="summary">
+							<p>Venue</p>
+							<p>$10/hour</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="extra content">
+			<button class="ui button">Chat with employer</button>
+		</div>
+	</div>
+	<div class="ui card five wide column">
+		<div class="content">
+			<div class="header">Front end developer</div>
+		</div>
+		<div class="content">
+			<h4 class="ui sub header">14 Feb 2016 / 9am - 7pm</h4>
+			<div class="ui small feed">
+				<div class="event">
+					<div class="content">
+						<div class="summary">
+							<p>Venue</p>
+							<p>$10/hour</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="extra content">
+			<button class="ui button">Chat with employer</button>
+		</div>
+	</div>
+
 </div>
-
-
-
 @endsection

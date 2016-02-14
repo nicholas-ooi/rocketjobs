@@ -4,6 +4,10 @@
 .footer.segment {
   padding: 5em 0em; }
 
+i.big.sidebar.icon {
+  margin-top: 10px;
+  margin-left: 40px; }
+
 /* Home page CSS */
 .masthead.segment {
   min-height: 700px;
@@ -41,6 +45,16 @@
 .register-user-form {
   margin: 50px; }
 
+/* User home page css */
+.user-home {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important; }
+  .user-home .ui.card {
+    margin-top: 20px; }
+
+.user-home.ui.icon.input.container input {
+  width: 100%; }
+
 /*employee login css*/
 .employee.ui.container {
   width: 1127px;
@@ -52,6 +66,7 @@
 .employee.ui.vertical.segment {
   width: 100% !important;
   height: 100% !important;
-  background-image: url("/testingsite/resources/assets/images/login.jpg"); }
+  background-image: url("/testingsite/resources/assets/images/login.jpg"); 
+}
 
 /*# sourceMappingURL=home.css.map */
