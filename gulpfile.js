@@ -14,5 +14,7 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.less('semantic/src/semantic.less');
     mix.sass('app.scss');
-    
+    mix.sass('employee_login.scss');
+    mix.sass('home.scss');
+
 });
