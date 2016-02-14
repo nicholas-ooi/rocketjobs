@@ -1,1 +1,1 @@
-{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAEA;EAEA,gBAAgB,EACf","file":"app.css","sourcesContent":["// @import \"node_modules/bootstrap-sass/assets/stylesheets/bootstrap\";\r\n\r\n.testClass\r\n{\r\nfont-size: 20px;\r\n}"],"sourceRoot":"/source/"}
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAEA;EAEE,gBAAgB,EACjB","file":"app.css","sourcesContent":["// @import \"node_modules/bootstrap-sass/assets/stylesheets/bootstrap\";\n\n.testClass\n{\n  font-size: 20px;\n}\n"],"sourceRoot":"/source/"}

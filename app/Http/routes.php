@@ -15,16 +15,9 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/home', function () {
-    return view('pages.home');
-});
-
-Route::get('/login_1', function () {
-    return view('pages.employee_login');
-});
-
 
 Route::get('user/{id}', 'UserController@showProfile');
+Route::get('alchemy', 'AlchemyController@showResult');
 
 
 /*
@@ -40,4 +33,15 @@ Route::get('user/{id}', 'UserController@showProfile');
 
 Route::group(['middleware' => ['web']], function () {
     //
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('user/{id}', 'UserController@showProfile');
+
+    Route::get('/', function () {
+        return view('pages.home');
+    });
+
 });
