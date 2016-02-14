@@ -43,4 +43,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasMany('App\Testimonials');
     }
 
+    public function jobPosts()
+{
+    return $this->belongsToMany('App\Jobs')->withPivot('status')
+    	->withTimestamps();
+}
+
 }

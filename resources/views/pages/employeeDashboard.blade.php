@@ -50,11 +50,20 @@
 				</div>
 			</div>
 			<div class="extra content">
-
-				<button class="ui button">Request</button>
+				{{$job->getStatus()}}
+				@if ($job->getStatus() != "requesting")
+				{!! Form::open(
+			      array(
+			          'url' => 'requestJob',
+			          'class' => 'ui form',
+			          'novalidate' => 'novalidate')) !!}
+												<input type="submit" class="ui button" value="Request" />
+				<input name="job_id" type="hidden"  value="{{$job->id}}" />
+				{!! Form::close() !!}
+				@endif
 		</div>
 	</div>
-		
+
 		@endforeach
 	</div>
 </div>

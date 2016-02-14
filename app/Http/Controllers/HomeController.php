@@ -33,6 +33,14 @@ class HomeController extends Controller
         }
     }
 
+    public function requestJob(Request $request)
+    {
+          $user = Auth::user();
+          $job = Jobs::find($request->input("job_id"));
+          $job->users()->attach($user->id,['status' => "requesting"]);
+          return redirect('/');
+    }
+
     public function searchJob(Request $request)
     {
       if (Auth::check()) {
