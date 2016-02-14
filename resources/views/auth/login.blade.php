@@ -1,66 +1,80 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                        {!! csrf_field() !!}
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">E-Mail Address</label>
+    <div class="pusher">
+        <div class="employee ui inverted vertical masthead center aligned segment">
 
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+            @include('layouts.topnavbar')
+            <form role="form" method="POST" action="{{ url('/login') }}">
+                <div class="employee ui raised very padded text container segment">
+                    <div class="ui two column middle aligned very relaxed stackable grid">
+                        <div class="column">
+                            <form class="ui form" role="form" method="POST" action="{{ url('/login') }}">
+                                {!! csrf_field() !!}
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                                <div class="field {{ $errors->has('email') ? ' has-error' : '' }}">
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Password</label>
+                                    <div class="ui left icon input">
+                                        <input placeholder="Email Address" type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                        <i class="at icon"></i>
+                                    </div>
 
-                            <div class="col-md-6">
-                                <input type="password" class="form-control" name="password">
+                                        @if ($errors->has('email'))
+                                            <div class="help-block">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </div>
+                                        @endif
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
                                 </div>
-                            </div>
-                        </div>
+                                <p/>
+                                <div class="field {{ $errors->has('password') ? ' has-error' : '' }}">
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-sign-in"></i>Login
-                                </button>
+                                    <div class="ui left icon input">
+                                        <input placeholder="Password" type="password" class="form-control" name="password">
+                                        <i class="lock icon"></i>
+                                    </div>
 
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
-                            </div>
+                                        @if ($errors->has('password'))
+                                            <div class="help-block">
+                                                <strong>{{ $errors->first('password') }}</strong>
+                                            </div>
+                                        @endif
+                                </div>
+                                <p/>
+                                <div class="field">
+
+                                        <div class="ui checkbox">
+                                            <label>
+                                                <input type="checkbox" name="remember"> Remember Me
+                                            </label>
+                                        </div>
+                                </div>
+                                <p/>
+                                <div class="field">
+
+                                        <button type="submit" class="ui blue submit button">
+                                            <i class="fa fa-btn fa-sign-in"></i>Login
+                                        </button>
+                                    <p/>
+                                    <p/>
+                                        <a class="ui link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                        <div class="ui vertical divider">
+                            Or
+                        </div>
+                        <div class="center aligned column">
+                            <a class="ui big green labeled icon button" href="{{url('/register')}}">
+                                <i class="signup icon"></i>
+                                Sign Up
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
-</div>
 @endsection

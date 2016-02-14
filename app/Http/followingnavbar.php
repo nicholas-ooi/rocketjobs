@@ -5,7 +5,7 @@
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
   <div class="ui container">
-    <a class="active item">Home</a>
+    <a class="active item" href="{{ url('/') }}">Home</a>
     <a class="item">Work</a>
     <a class="item">Company</a>
     <a class="item">Careers</a>

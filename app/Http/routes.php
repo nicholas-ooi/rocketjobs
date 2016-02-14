@@ -15,15 +15,18 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/login_1', function () {
-    return view('pages.employee_login');
-});
-
 Route::get('user/{id}', 'UserController@showProfile');
 Route::get('alchemy', 'AlchemyController@showResult');
 
 
 
+Route::get('reg', function() {
+    return view('pages.registerEmployer');
+});
+
+Route::get('regU', function() {
+    return view('pages.registerUser');
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes

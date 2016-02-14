@@ -1,6 +1,7 @@
 <title>RocketJobs</title>
 <link rel="stylesheet" href="{{ URL::asset('/public/css/semantic.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('/public/css/home.css') }}" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('/public/components/reset.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('/public/components/site.css') }}">
