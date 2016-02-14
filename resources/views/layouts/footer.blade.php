@@ -1,6 +1,6 @@
 
 	<!-- Footer -->
-	<div class="ui inverted vertical footer segment">
+	<div class="fixed ui inverted vertical footer segment">
     <div class="ui container">
       <div class="ui stackable inverted divided equal height stackable grid">
         <div class="three wide column">

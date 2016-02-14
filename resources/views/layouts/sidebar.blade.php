@@ -1,8 +1,14 @@
-	<div class="ui vertical visible inverted sidebar menu">
-	  <a class="active item">Home</a>
-	  <a class="item">Work</a>
-	  <a class="item">Company</a>
-	  <a class="item">Careers</a>
-	  <a class="item">Login</a>
-	  <a class="item">Signup</a>
-	</div>
+<div class="ui left demo vertical inverted sidebar labeled icon menu">
+  <a class="item">
+    <i class="home icon"></i>
+    Home
+  </a>
+  <a class="item">
+    <i class="block layout icon"></i>
+    Topics
+  </a>
+  <a class="item">
+    <i class="smile icon"></i>
+    Friends
+  </a>
+</div>

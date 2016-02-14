@@ -4,8 +4,10 @@
 
 @include('layouts.topnavbarWhite')
 
+
+
 <div class="register-form-title ui text container">
-  <h1>Hire Me!</h1>
+  <h1>Need manpower?</h1>
 </div>
 
 <!-- Page Contents -->
@@ -91,26 +93,17 @@
       <option value="WY">Wyoming</option>
     </select>
   </div>
-  <h4 class="ui dividing header">Pay Cheque</h4>
+  <h4 class="ui dividing header">Payment Information</h4>
    <div class="field">
     <label>Card Type</label>
     <div class="ui selection dropdown">
       <input type="hidden" name="card[type]">
-      <div class="default text">Type</div>
       <i class="dropdown icon"></i>
+      <div class="default text">Type</div>
       <div class="menu">
-        <div class="item" data-value="visa">
-          <i class="visa icon"></i>
-          Visa
-        </div>
-        <div class="item" data-value="amex">
-          <i class="amex icon"></i>
-          American Express
-        </div>
-        <div class="item" data-value="discover">
-          <i class="discover icon"></i>
-          Discover
-        </div>
+        <div class="item" data-value="visa"></div>
+        <div class="item" data-value="amex"></div>
+        <div class="item" data-value="discover"></div>
       </div>
     </div>
   </div>
@@ -153,4 +146,10 @@
 </form>
 
 </div>
+
+<!--
+<script type="text/javascript">
+    $('.ui.dropdown').dropdown();
+</script>
+-->
 @endsection

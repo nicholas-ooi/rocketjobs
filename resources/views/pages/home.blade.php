@@ -13,7 +13,7 @@
       <div class="item">
       <div class="home-search ui icon input">
         <input type="text" placeholder="Which city are you located?">
-        <i class="cloud icon"></i>
+        <i class="big arrow circle outline right icon"></i>
       </div>
     </div>
     </div>
