@@ -55,32 +55,36 @@ class JobController extends Controller
             $files = [];
             try {
                 $files = $request->file("images");
-            } catch (\Exception $e) {
-            }
-            foreach ($files as $file) {
 
-                $imageName = $job->id . "." . $file->getClientOriginalExtension();
+                foreach ($files as $file) {
 
-                $file->move(base_path() . '/public/images/job/', $imageName);
+                    $imageName = $job->id . "." . $file->getClientOriginalExtension();
 
-                $jobImage = new JobsImages();
-                $jobImage->job_id = $job->id;
-                $jobImage->src = $imageName;
-                $jobImage->save();
+                    $file->move(base_path() . '/public/images/job/', $imageName);
 
-                $response = $alchemyapi->keywords('text', $job->description, array('sentiment' => 1));
-                if (isset($response['keywords'])) {
-                    foreach ($response['keywords'] as $key) {
-                        $jobKey = new JobKeywords();
-                        $jobKey->job_id = $job->id;
-                        $jobKey->keyword = $key['text'];
-                        $jobKey->score = $key['relevance'];
-                        $jobKey->sentiment = $key['sentiment']['type'];
-                        $jobKey->save();
+                    $jobImage = new JobsImages();
+                    $jobImage->job_id = $job->id;
+                    $jobImage->src = $imageName;
+                    $jobImage->save();
+
+                    $response = $alchemyapi->keywords('text', $job->description, array('sentiment' => 1));
+                    if (isset($response['keywords'])) {
+                        foreach ($response['keywords'] as $key) {
+                            $jobKey = new JobKeywords();
+                            $jobKey->job_id = $job->id;
+                            $jobKey->keyword = $key['text'];
+                            $jobKey->score = $key['relevance'];
+                            $jobKey->sentiment = $key['sentiment']['type'];
+                            $jobKey->save();
+                        }
                     }
+
                 }
 
-            }
+            } catch (\Exception $e) {
+
+
+          }
 
             $API_KEY = "8a2318b0-d121-11e5-8378-4dad29be0fab";
             $BASE_PATH = "http://api.cortical.io/rest";

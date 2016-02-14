@@ -55,6 +55,8 @@
 				@endif
 
 				@foreach ($job->users as $jobPost)
+
+				@if ($jobPost->user_id == Auth::user()->id)
 				@if ($jobPost->pivot->status == "requesting")
 					<input disabled="disabled" type="button" class="ui button" value="Requested" />
 				@endif
@@ -63,6 +65,7 @@
 				@endif
 				@if ($jobPost->pivot->status == "decline")
 					<input disabled="disabled" type="button" class="ui red button" value="Decline" />
+				@endif
 				@endif
 				@endforeach
 		</div>
