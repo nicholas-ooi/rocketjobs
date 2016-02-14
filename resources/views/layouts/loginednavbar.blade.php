@@ -6,7 +6,7 @@
     	<a class="item" href="{{url('/')}}">RocketJobs <i class="large rocket icon"></i></a>
    		<div class="right item">
     		<a class="ui button">Welcome See Ting!</a>
-        	<a class="ui button" href="{{url('/home')}}">Logout</a>
+        	<a class="ui button" href="{{url('/logout')}}">Logout</a>
     	</div>
     </div>
 </div>
