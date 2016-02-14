@@ -30,7 +30,7 @@ class JobController extends Controller
 
   public function getJobsJson()
   {
-    $jobs = Jobs::all();
+    $jobs = Jobs::join('users', 'users.id', '=', 'jobs.employer_id')->groupBy("jobs.employer_id")->get();
     return $jobs->toJson();
   }
 
