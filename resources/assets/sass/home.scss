@@ -17,6 +17,10 @@
   float: right;
 }
 
+.nav.ui.container{
+  width: 100%;
+}
+
 i.big.sidebar.icon {
   margin-top: 10px;
   margin-left: 40px;
@@ -46,10 +50,6 @@ i.big.sidebar.icon {
 	}
 }
 
-.nav.fixed.ui.container{
-  width: 100%;
-}
-
 .home-search {
 	width: 80%;
 }
@@ -67,17 +67,20 @@ i.big.sidebar.icon {
 	}
 }
 
-/* Register User page CSS */
-/*.register-form-title {
-  h1 {
-    margin-top: 30px !important;
-    font-size: 50px;
-    text-align: center;
-  }
-}
-*/
+/* new jobs CSS */
 .register-user-form {
   margin: 60px;
+  color: teal;
+
+  h4 {
+    color: teal;
+  }
+
+  .field {
+    label {
+      color: teal;
+    }
+  }
 
   .ui.dividing.header {
     font-size: 35px;
@@ -91,11 +94,14 @@ i.big.sidebar.icon {
   margin-top: 200px;
 }
 
+<<<<<<< HEAD
 .tagline.ui.container{
   height: 50px;
   width: auto;
   text-align: center;
 }
+=======
+>>>>>>> Editing styles
 /* User home page css */
 .user-home {
   margin-top: 20px !important;
@@ -105,8 +111,6 @@ i.big.sidebar.icon {
     margin-top: 20px;
   }
 }
-
-// .home.ui.inverted.
 
 .homeone.ui.vertical.segment{
   width:100% !important;

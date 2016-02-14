@@ -6,7 +6,6 @@
 
 
 <div class="employee-home ui icon input container">
-
 	<input type="text" placeholder="Search for jobs">
 	<i class="big arrow circle outline right icon"></i>
 </div>
@@ -51,27 +50,28 @@
 			</div>
 			<div class="extra content">
 				<div class="ui two statistics">
-  <div class="olive statistic">
-    <div class="value">
-      22
-    </div>
-    <div class="label">
-      Request
-    </div>
-  </div>
-  <div class="statistic">
-    <div class="value">
-      22
-    </div>
-    <div class="label">
-      Saves
-    </div>
-  </div>
+					  <div class="olive statistic">
+					    <div class="value">
+					      22
+					    </div>
+					    <div class="label">
+					      Request
+					    </div>
+					  </div>
+					  <div class="statistic">
+					    <div class="value">
+					      22
+					    </div>
+					    <div class="label">
+					      Saves
+					    </div>
+					  </div>
+				</div>
 			</div>
 		</div>
-	</div>
-		
 		@endforeach
+	</div>	
+</div>
 
 <div class="employee-home container history">
 	<h1>Moolah accounted for: $650 </h1>

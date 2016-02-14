@@ -1,4 +1,4 @@
- <div class="nav fixed ui container">
+ <div class="nav ui container">
     <div class="ui large secondary pointing menu">
     	<div>
 			<i class="big sidebar icon" onClick="runSidebar();"></i>

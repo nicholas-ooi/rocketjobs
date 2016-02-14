@@ -6,7 +6,6 @@
 
 
 <div class="employee-home ui icon input container">
-
 	<input type="text" placeholder="Search for jobs">
 	<i class="big arrow circle outline right icon"></i>
 </div>

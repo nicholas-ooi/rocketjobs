@@ -53,7 +53,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/requestJob', 'HomeController@requestJob');
 
  //    Route::get('/', function () {
-	//     return view('pages.employeeDashboard');
+	//     return view('pages.applicants');
 	// });
 
 });

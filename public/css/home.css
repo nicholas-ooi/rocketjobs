@@ -13,6 +13,9 @@
   margin-bottom: 15px;
   float: right; }
 
+.nav.ui.container {
+  width: 100%; }
+
 i.big.sidebar.icon {
   margin-top: 10px;
   margin-left: 40px; }
@@ -33,9 +36,6 @@ i.big.sidebar.icon {
     font-size: 1.7em;
     font-weight: normal; }
 
-.nav.fixed.ui.container {
-  width: 100%; }
-
 .home-search {
   width: 80%; }
 
@@ -49,17 +49,14 @@ i.big.sidebar.icon {
     text-align: center !important;
     font-size: 1.7em; }
 
-/* Register User page CSS */
-/*.register-form-title {
-  h1 {
-    margin-top: 30px !important;
-    font-size: 50px;
-    text-align: center;
-  }
-}
-*/
+/* new jobs CSS */
 .register-user-form {
-  margin: 60px; }
+  margin: 60px;
+  color: teal; }
+  .register-user-form h4 {
+    color: teal; }
+  .register-user-form .field label {
+    color: teal; }
   .register-user-form .ui.dividing.header {
     font-size: 35px;
     padding-bottom: 30px;
