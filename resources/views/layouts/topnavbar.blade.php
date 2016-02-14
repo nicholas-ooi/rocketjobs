@@ -1,4 +1,4 @@
- <div class="ui container">
+<div class=" nav fixed ui container">
     <div class="ui large secondary inverted pointing menu">
       <a class="item" href="{{url('/')}}">RocketJobs <i class="large rocket icon"></i></a>
       <div class="right item">

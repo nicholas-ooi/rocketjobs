@@ -24,6 +24,9 @@ i.big.sidebar.icon {
     font-size: 1.7em;
     font-weight: normal; }
 
+.nav.fixed.ui.container {
+  width: 100%; }
+
 .home-search {
   width: 80%; }
 
@@ -66,7 +69,9 @@ i.big.sidebar.icon {
 .employee.ui.vertical.segment {
   width: 100% !important;
   height: 100% !important;
-  background-image: url("/testingsite/resources/assets/images/login.jpg"); 
+  background-image: url("/testingsite/resources/assets/images/login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
 /*# sourceMappingURL=home.css.map */

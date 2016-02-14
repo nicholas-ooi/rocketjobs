@@ -35,6 +35,10 @@ i.big.sidebar.icon {
 	}
 }
 
+.nav.fixed.ui.container{
+  width: 100%;
+}
+
 .home-search {
 	width: 80%;
 }
@@ -92,6 +96,9 @@ i.big.sidebar.icon {
   width:100% !important;
   height:100% !important;
   background-image: url('/testingsite/resources/assets/images/login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
