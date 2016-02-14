@@ -49,28 +49,20 @@
 				</div>
 			</div>
 			<div class="extra content">
-				<div class="ui two statistics">
+				<div class="ui one statistics">
 					  <div class="olive statistic">
 					    <div class="value">
-					      22
+					      {{count($job->users) }}
 					    </div>
 					    <div class="label">
 					      Request
-					    </div>
-					  </div>
-					  <div class="statistic">
-					    <div class="value">
-					      22
-					    </div>
-					    <div class="label">
-					      Saves
 					    </div>
 					  </div>
 				</div>
 			</div>
 		</div>
 		@endforeach
-	</div>	
+	</div>
 </div>
 
 <div class="employee-home container history">

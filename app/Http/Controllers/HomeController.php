@@ -33,6 +33,38 @@ class HomeController extends Controller
         }
     }
 
+    public function getApplicant(Request $request)
+    {
+
+      $job = Jobs::find($request->input("job_id"));
+      return view('pages.applicant',array("job"=>$job));
+    }
+
+    public function getApplicants(Request $request)
+    {
+      $user = Auth::user();
+
+      $jobs = Jobs::where("employer_id","=",$user->id)->get();
+      return view('pages.applicants',array("jobs"=>$jobs));
+    }
+
+    public function approveJob(Request $request)
+    {
+          $user = Auth::user();
+          $job = Jobs::find($request->input("job_id"));
+
+          $job->users()->sync([$user->id => ['status' => "approved"]]);
+          return redirect('/applicants');
+    }
+
+    public function declineJob(Request $request)
+    {
+          $user = Auth::user();
+          $job = Jobs::find($request->input("job_id"));
+          $job->users()->sync([$user->id => ['status' => "decline"]]);
+          return redirect('/applicants');
+    }
+
     public function requestJob(Request $request)
     {
           $user = Auth::user();

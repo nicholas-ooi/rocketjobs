@@ -51,6 +51,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('api/add_job', 'JobController@addJob');
     Route::get('/', 'HomeController@show');
     Route::post('/requestJob', 'HomeController@requestJob');
+    Route::post('/approveJob', 'HomeController@approveJob');
+    Route::post('/declineJob', 'HomeController@declineJob');
+    Route::get('/applicants', 'HomeController@getApplicants');
 
  //    Route::get('/', function () {
 	//     return view('pages.applicants');

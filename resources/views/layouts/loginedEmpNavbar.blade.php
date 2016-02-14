@@ -26,7 +26,7 @@
 		<i class="spy icon"></i>
 		Add Job
 	</a>
-	<a class="item">
+	<a class="item" href="{{url('/applicants')}}">
 		<i class="add user icon"></i>
 		Applicants
 	</a>
