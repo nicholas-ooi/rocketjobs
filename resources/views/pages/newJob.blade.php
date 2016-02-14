@@ -18,7 +18,7 @@
 
   {!! Form::open(
       array(
-          'url' => 'addJob',
+          'url' => 'api/add_job',
           'class' => 'ui form',
           'novalidate' => 'novalidate',
           'files' => true)) !!}
@@ -29,11 +29,11 @@
   <div class="field">
     <label>Job Title</label>
       <div class="field">
-            {!! Form::text('title', null, array('placeholder'=>'1234')) !!}
+            {!! Form::text('title', null, array('placeholder'=>'Title')) !!}
       </div>
       <label>Job Description</label>
       <div class="field">
-            {!! Form::textarea('description', null, array('placeholder'=>'1234')) !!}
+            {!! Form::textarea('description', null, array('placeholder'=>'Description')) !!}
       </div>
       <label>Upload Workplace Image(s)</label>
       <div class="field">

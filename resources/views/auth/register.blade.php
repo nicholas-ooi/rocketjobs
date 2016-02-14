@@ -76,6 +76,7 @@
                                         </button>
                                     </div>
                                 </div>
+                                {{Form::hidden('type','employee')}}
                             </form>
 
 

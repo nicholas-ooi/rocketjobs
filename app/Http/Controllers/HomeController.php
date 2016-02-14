@@ -11,8 +11,13 @@ class HomeController extends Controller
     public function show() {
 
         if (Auth::check()) {
-          $jobs = Jobs::all();
-            return view('pages.userJobSearch',array("jobs"=>$jobs));
+            $user = Auth::user();
+            if ($user->type === 'employer') {
+
+            } else {
+                $jobs = Jobs::all();
+                return view('pages.employeeHome', array("jobs" => $jobs));
+            }
         }
         else {
           return view('pages.home');
