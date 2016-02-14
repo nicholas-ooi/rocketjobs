@@ -30,8 +30,7 @@ class UsersJobsTable extends Migration
      */
     public function down()
     {
-        Schema::create('users_jobs', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('users_jobs');
+
     }
 }

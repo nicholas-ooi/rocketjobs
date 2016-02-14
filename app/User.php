@@ -13,10 +13,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     use Authenticatable, CanResetPassword;
 
     /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
+ * The database table used by the model.
+ *
+ * @var string
+ */
     protected $table = 'users';
 
     /**
@@ -36,6 +36,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function jobs()
     {
         return $this->hasMany('App\Jobs');
+    }
+
+    public function testimonials()
+    {
+        return $this->hasMany('App\Testimonials');
     }
 
 }

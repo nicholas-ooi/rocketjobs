@@ -48,14 +48,12 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('user/{id}', 'UserController@showProfile');
+    Route::get('user/{id}/add_testimonial', 'UserController@showAddTestimonial');
     Route::get('newJob', 'JobController@getNewJob');
     Route::post('addJob', 'JobController@addJob');
     Route::get('searchJobs', 'HomeController@searchJob');
-    Route::get('/home', 'HomeController@show');
 
-    Route::get('/', function () {
-        return view('pages.home');
-    });
-
+    Route::post('api/add_testimonial', 'UserController@addTestimonial');
+    Route::get('/', 'HomeController@show');
 
 });
