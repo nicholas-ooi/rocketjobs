@@ -54,6 +54,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/approveJob', 'HomeController@approveJob');
     Route::post('/declineJob', 'HomeController@declineJob');
     Route::get('/applicants', 'HomeController@getApplicants');
+    Route::get('/getEmployeeJobOffers', 'HomeController@getEmployeeJobOffers');
 
     Route::get('/logout', function()
     {
@@ -61,7 +62,7 @@ Route::group(['middleware' => 'web'], function () {
         $user->status = 'unavailable';
         $user->save();
         Auth::logout();
-        
+
         return Redirect::to('/');
     });
 

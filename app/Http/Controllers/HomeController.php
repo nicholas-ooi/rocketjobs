@@ -22,7 +22,7 @@ class HomeController extends Controller
             } else if ($user->type === 'employee') {
 
 
-              $jobs = Jobs::orderByRaw("RAND()")->get();
+              $jobs = $user->jobPosts()->orderByRaw("RAND()")->get();
                 return view('pages.employeeDashboard',array("user"=>$user,"jobs"=>$jobs));
             } else {
                 $jobs = Jobs::all();
@@ -47,6 +47,14 @@ class HomeController extends Controller
 
       $jobs = Jobs::where("employer_id","=",$user->id)->get();
       return view('pages.applicants',array("jobs"=>$jobs));
+    }
+
+    public function getEmployeeJobOffers(Request $request)
+    {
+      $user = Auth::user();
+
+      $jobs = $user->jobPosts()->get();
+      return view('pages.employeeJobOffer',array("jobs"=>$jobs));
     }
 
     public function approveJob(Request $request)
